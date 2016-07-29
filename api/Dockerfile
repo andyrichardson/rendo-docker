@@ -4,7 +4,6 @@ MAINTAINER Andy Richardson
 ENV NODE_ENV production
 
 COPY keys/id_rsa /root/.ssh/id_rsa
-COPY keys/id_rsa.pub /root/.ssh/id_rsa.pub
 
 RUN mkdir /var/www
 WORKDIR /var/www/
