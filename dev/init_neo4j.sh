@@ -3,7 +3,7 @@
 docker build -t neo4j:dev -f dev/neo4j/Dockerfile .
 
 # Kill any previous containers
-docker rm noe4j-dev 2> /dev/null
+docker rm neo4j-dev 1>& 2> /dev/null
 
 # Run container
 docker run -p 7474:7474 \
