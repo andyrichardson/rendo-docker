@@ -9,4 +9,5 @@ docker rm rendo-api-dev 1>& 2> /dev/null
 docker run -t -i -p 80:80 \
 -v $PWD/../rendo-api:/var/www/rendo-api \
 --name=rendo-api-dev \
+--net=user-bridge \
 rendo-api:dev

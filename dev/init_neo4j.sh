@@ -9,4 +9,5 @@ docker rm neo4j-dev 1>& 2> /dev/null
 docker run -p 7474:7474 \
 -v $PWD/../neo4j/data:/data \
 --name=neo4j-dev \
+--net=user-bridge \
 neo4j:dev
