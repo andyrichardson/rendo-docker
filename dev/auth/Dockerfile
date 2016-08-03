@@ -2,6 +2,7 @@ FROM node:argon
 MAINTAINER Andy Richardson
 
 ENV NODE_ENV development
+ENV PORT 80
 
 EXPOSE 80
 
@@ -11,7 +12,7 @@ apt-get update && \
 apt-get install -y --force-yes fish && \
 npm install -g nodemon
 
-RUN mkdir -p /var/www/rendo-oauth
-WORKDIR /var/www/rendo-oauth
+RUN mkdir -p /var/www/rendo-auth
+WORKDIR /var/www/rendo-auth
 
 CMD /usr/bin/fish
